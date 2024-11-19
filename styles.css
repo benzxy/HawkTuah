@@ -1,145 +1,57 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body & Layout */
 body {
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #1c1c1c, #0a0a0a);
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-header {
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  margin: 0;
+  background: #1c1c3b;
+  font-family: Arial, sans-serif;
+  color: white;
   text-align: center;
-  padding: 20px;
-  border-bottom: 3px solid #f4a300;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-}
-
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: #f4a300; /* Neon yellow */
-  text-shadow: 0 0 10px #f4a300, 0 0 20px #f4a300;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  font-size: 1.1em;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #f4a300;
-  color: #000;
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(244, 163, 0, 0.8);
-}
-
-/* Main Content */
-main {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-h2 {
-  font-size: 2.5em;
-  color: #f4a300;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px #f4a300, 0 0 20px #f4a300;
-}
-
-/* Game Cards */
-.game-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.game-card {
-  background: #1c1c1c;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  width: 200px;
-  padding: 10px;
   overflow: hidden;
-  transition: all 0.3s ease;
 }
 
-.game-card a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-}
-
-.game-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.game-card p {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #f4a300;
-  transition: all 0.3s ease;
-}
-
-/* Hover effects */
-.game-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-}
-
-.game-card:hover img {
-  transform: scale(1.05);
-}
-
-.game-card:hover p {
-  color: #fff;
-  text-shadow: 0 0 10px #f4a300;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+/* Background wallpaper */
+.background {
   position: fixed;
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  font-size: 0.9em;
-  letter-spacing: 1px;
+  height: 100%;
+  background: url("ps4-wallpaper.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.menu-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, border 0.3s;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.menu-item.selected {
+  transform: scale(1.2);
+  border: 3px solid white;
+}
+
+.menu-description {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+#youtube-player {
+  display: none; /* Keeps the player hidden while playing audio */
 }
