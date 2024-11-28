@@ -1,54 +1,102 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PS4 Menu with YouTube Music</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>List with Links</title>
+    <style>
+      body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 20px;
+        color: white;
+      }
+
+      .search {
+        margin-bottom: 10px;
+      }
+
+      .search input {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .list-item {
+        margin: 5px 0;
+      }
+
+      .list-item a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+
+      .list-item a:hover {
+        background-color: red;
+      }
+    </style>
   </head>
   <body>
-    <!-- Background Wallpaper -->
-    <div class="background"></div>
-
-    <!-- Main Content -->
-    <div class="menu-container">
-      <div
-        class="menu-item selected"
-        data-url="https://benzxy.github.io/griufrbhdfbdfwiu.github.io/"
-      >
-        <img src="icon1.png" alt="Anti Terrorist Hero" />
+    <div class="container">
+      <div class="search">
+        <input type="text" placeholder="Search..." />
       </div>
-      <div class="menu-item" data-url="https://example.com/cod-ghosts">
-        <img src="icon2.png" alt="Call of Duty: Ghosts" />
+      
+          
+        </div>
+        <ul class="list">
+          <li class="list-item">
+            <a href="https://example1.com" target="_blank">1on1soccer</a>
+          </li>
+          <li class="list-item">
+            <a href="https://example2.com" target="_blank">3dtanks</a>
+          </li>
+          <li class="list-item">
+            <a href="https://benzxy.github.io/b-fdfvegbg.github.io/" target="_blank">2048</a>
+          </li>
+          <li class="list-item">
+            <a href="https://benzxy.github.io/griufrbhdfbdfwiu.github.io/" target="_blank">Anti Terrorist Hero</a>
+          </li>
+          <li class="list-item">
+            <a href="https://chstextbook.github.io/pages/frame.html?nolag" target="_blank">Computer Bashing</a>
+          </li>
+        
       </div>
-      <div class="menu-item" data-url="https://www.geo-fs.com/">
-        <img src="icon3.png" alt="GeoFs" />
-      </div>
-      <div
-        class="menu-item"
-        data-url="https://benzxy.github.io/nyhrtbgefv.github.io/"
-      >
-        <img src="icon4.png" alt="Storm The House 2" />
-      </div>
-      <div
-        class="menu-item"
-        data-url="https://benzxy.github.io/b-fdfvegbg.github.io/"
-      >
-        <img src="icon5.png" alt="2048" />
-      </div>
-      <div
-        class="menu-item"
-        data-url="https://benzxy.github.io/fdsfegt.github.io/"
-      >
-        <img src="icon6.png" alt="Amoung Us" />
-      </div>
+      <ul class="list">
+        <li class="list-item">
+          <a href="https://benzxy.github.io/163246347dfhnj.github.io/" target="_blank">Doge Miner</a>
+        </li>
+        <li class="list-item">
+          <a href="https://example2.com" target="_blank">Flash Flight Simulator</a>
+        </li>
+        <li class="list-item">
+          <a href="https://www.geo-fs.com/" target="_blank">GeoFS</a>
+        </li>
+        <li class="list-item">
+          <a href="https://chstextbook.github.io/pages/frame.html?nolag target="_blank">Hobo</a>
+        </li>
+        <li class="list-item">
+          <a href="https://benzxy.github.io/nyhrtbgefv.github.io/" target="_blank">Storm The House 2</a>
+        </li>
+        <!-- Add more items here -->
+      </ul>
     </div>
-    <p class="menu-description">What's New</p>
-
-    <!-- YouTube Player (Hidden) -->
-    <div id="youtube-player"></div>
-
-    <script src="https://www.youtube.com/watch?v=sUOzplfB9ps"></script>
-    <script src="script.js"></script>
   </body>
 </html>
