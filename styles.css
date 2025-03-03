@@ -1,95 +1,104 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+/* General Styles */
+.video-player {
+  width: 100%; /* Make the video responsive */
+  max-width: 800px; /* Limit the width to 800px */
+  height: auto; /* Maintain aspect ratio */
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, #ff0051, #ffbf00);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
 }
 
-.profile-container {
-  width: 300px;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-
-/* Header with Settings */
+/* Header */
 header {
+  background-color: #1e1e1e;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  font-size: 1.2em;
 }
 
-.settings-icon {
-  cursor: pointer;
-  font-size: 1.5em;
+header h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
-/* Avatar Styling */
-.avatar img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-/* Username & Bio */
-.username {
-  margin: 10px 0;
-  font-size: 1.2em;
-}
-
-.bio {
-  font-style: italic;
-  margin-bottom: 15px;
-}
-
-/* Stats Section */
-.stats {
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-around;
-  margin: 10px 0;
-  font-size: 0.9em;
 }
 
-.stats span {
-  display: block;
-  font-weight: bold;
-  font-size: 1.1em;
+nav ul li {
+  margin-left: 20px;
 }
 
-/* Edit Profile Button */
-.edit-profile-btn {
-  background-color: white;
-  color: #ff0051;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 1em;
-  margin: 10px 0;
-  font-weight: bold;
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
-.edit-profile-btn:hover {
-  background-color: #ffbf00;
-  color: white;
+nav ul li a:hover {
+  color: #ff0000;
 }
 
-/* No Content Message */
-.message {
-  margin-top: 10px;
-  font-size: 0.9em;
-  opacity: 0.8;
+/* Main Content */
+main {
+  padding: 20px;
+  text-align: center;
 }
 
+#video-section h2 {
+  text-align: center;
+}
+
+/* Video Container */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Video Styling */
+video {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 5px;
+  border: 2px solid #ff0000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1e1e1e;
+  margin-top: 20px;
+}
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between videos */
+  justify-content: center;
+}
+
+.video-player {
+  width: 100%;
+  max-width: 300px; /* Limit the video width */
+  height: auto; /* Keep aspect ratio intact */
+  border: 2px solid #ddd; /* Optional: Adds a border to each video */
+  border-radius: 10px; /* Optional: Adds rounded corners to each video */
+}
