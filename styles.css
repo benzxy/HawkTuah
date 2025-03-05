@@ -1,104 +1,78 @@
 /* General Styles */
-.video-player {
-  width: 100%; /* Make the video responsive */
-  max-width: 800px; /* Limit the width to 800px */
-  height: auto; /* Maintain aspect ratio */
-}
-
 body {
   font-family: Arial, sans-serif;
+  background-color: #000; /* Black background like Twitter */
+  color: #fff;
   margin: 0;
   padding: 0;
-  background-color: #121212;
-  color: #ffffff;
-}
-
-/* Header */
-header {
-  background-color: #1e1e1e;
-  padding: 15px 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ff0000;
-}
-
-/* Main Content */
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-#video-section h2 {
-  text-align: center;
-}
-
-/* Video Container */
-.video-container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Responsive grid */
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
-  padding: 10px;
-}
-
-/* Video Styling */
-video {
+/* Video Feed Container */
+.video-feed {
   width: 100%;
-  height: auto;
-  max-width: 600px;
-  border-radius: 5px;
-  border: 2px solid #ff0000;
+  max-width: 900px; /* Makes everything more compact */
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #1e1e1e;
-  margin-top: 20px;
+/* Twitter-style video post */
+.video-post {
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 22px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
-.video-container {
+
+/* Header with Profile Picture */
+.video-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Space between videos */
-  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #aaa;
 }
 
+/* Video Description */
+.video-description {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+/* Hashtags */
+.video-description a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+/* Smaller Video Player */
 .video-player {
   width: 100%;
-  max-width: 300px; /* Limit the video width */
-  height: auto; /* Keep aspect ratio intact */
-  border: 2px solid #ddd; /* Optional: Adds a border to each video */
-  border-radius: 10px; /* Optional: Adds rounded corners to each video */
+  max-height: 470px; /* Adjust video height */
+  border-radius: 5px;
+  outline: none;
+  background-color: #1c1c1c;
+}
+
+/* Video Controls */
+.video-player::-webkit-media-controls-panel {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 12px 12px;
+}
+
+.video-player::-webkit-media-controls-play-button,
+.video-player::-webkit-media-controls-volume-slider {
+  filter: invert(1);
+}
+
+/* Engagement (Like, Retweet, Views) */
+.engagement {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 10px;
 }
