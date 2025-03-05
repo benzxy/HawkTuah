@@ -1,60 +1,202 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Street Fights 🥊</title>
+    <title>Twitter-Style Video Feed</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Street Fights 🥊</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="video-section">
-        <h2>Featured Videos</h2>
-        <div class="video-container">
-          <!-- Video 1 -->
-          <video controls class="video-player">
-            <source src="/fight.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <!-- Video 2 -->
-          <video controls class="video-player">
-            <source src="/bruh.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <!-- Video 3 -->
-          <video controls class="video-player">
-            <source src="/cool.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <!-- Video 4 -->
-          <video controls class="video-player">
-            <source
-              src="man-has-his-blood-spurting-out-after-being-stabbed-in-a-fist-fight.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-          <!-- Video 5 -->
-          <video controls class="video-player">
-            <source src="idk.mp4" " type="" /> Your browser does not support the
-            video tag.
-          </video>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: black; /* Set background color to black */
+            color: white; /* Set text color to white for contrast */
+        }
+
+        .video-feed {
+            flex: 1; /* Allows the video feed to take the remaining space */
+            padding: 20px;
+            background-color: #1a1a1a; /* Dark background for video feed */
+        }
+
+        .video-post {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #2a2a2a; /* Darker background for individual posts */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .video-description {
+            margin: 10px 0;
+        }
+
+        .engagement {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .navbar button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .navbar button:hover {
+            color: #ccc; /* Changes color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-feed">
+        <!-- Video Post 1 -->
+        <div class="video-post">
+            <div class="video-header">
+                <img src="profile.jpg" alt="Profile" width="40" height="40" style="border-radius: 50%" />
+                <div>
+                    <strong>fightfan123</strong> <span>@fightfan123 · Mar 3, 2025</span>
+                </div>
+            </div>
+            <p class="video-description">
+                Girl messes with someone stronger than her <a href="#">#Fights</a> <a href="#">#streetfight</a>
+            </p>
+            <video controls class="video-player">
+                <source src="bird.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="engagement">
+                <span>💬 34</span>
+                <span>🔁 100</span>
+                <span>❤️ 2.3K</span>
+                <span>📊 90K</span>
+            </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Street Fights. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+
+        <!-- Video Post 2 -->
+        <div class="video-post">
+            <div class="video-header">
+                <img src="profile.jpg" alt="Profile" width="40" height="40" style="border-radius: 50%" />
+                <div>
+                    <strong>fightking</strong> <span>@fightking99 · Feb 15, 2023</span>
+                </div>
+            </div>
+            <p class="video-description">
+                Kid gets cooked and cries <a href="#">#boxing</a> <a href="#">#FightClips</a>
+            </p>
+            <video controls class="video-player">
+                <source src="potato.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="engagement">
+                <span>💬 45</span>
+                <span>🔁 120</span>
+                <span>❤️ 5.1K</span>
+                <span>📊 150K</span>
+            </div>
+        </div>
+
+        <!-- More Video Posts -->
+        <div class="video-post">
+            <div class="video-header">
+                <img src="profile.jpg" alt="Profile" width="40" height="40" style="border-radius: 50%" />
+                <div>
+                    <strong>streetfighter</strong> <span>@real_fights · Jan 20, 2024</span>
+                </div>
+            </div>
+            <p class="video-description">
+                Girl cries after getting whooped <a href="#">#MMA</a> <a href="#">#knockout</a>
+            </p>
+            <video controls class="video-player">
+                <source src="sapling.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="engagement">
+                <span>💬 25</span>
+                <span>🔁 85</span>
+                <span>❤️ 1.9K</span>
+                <span>📊 75K</span>
+            </div>
+        </div>
+
+        <!-- Video Post 4 -->
+        <div class="video-post">
+            <div class="video-header">
+                <img src="profile.jpg" alt="Profile" width="40" height="40" style="border-radius: 50%" />
+                <div>
+                    <strong>boxingfan</strong> <span>@boxinglover · Dec 12, 2024</span>
+                </div>
+            </div>
+            <p class="video-description">
+                Grown man cries after getting cooked <a href="#">#Fight</a> <a href="#">#fastpunches</a>
+            </p>
+            <video controls class="video-player">
+                <source src="plane.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="engagement">
+                <span>💬 59</span>
+                <span>🔁 130</span>
+                <span>❤️ 3.2K</span>
+                <span>📊 110K</span>
+            </div>
+        </div>
+
+        <!-- Video Post 5 -->
+        <div class="video-post">
+            <div class="video-header">
+                <img src="profile.jpg" alt="Profile" width="40" height="40" style="border-radius: 50%" />
+                <div>
+                    <strong>bruhmoments</strong> <span>@bruh_moments · Nov 25, 2024</span>
+                </div>
+            </div>
+            <p class="video-description">
+                <s> Student knocks out teacher with chair </s> <a href="#">#KO</a> <a href="#">#MMA</a>
+            </p>
+            <video controls class="video-player">
+                <source src="schoolgy.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="engagement">
+                <span>💬 20</span>
+                <span>🔁 70</span>
+                <span>❤️ 1.5K</span>
+                <span>📊 60K</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <button onclick="navigate(1)">1</button>
+        <button onclick="navigate(2)">2</button>
+        <button onclick="navigate(3)">3</button>
+        <button onclick="navigate(4)">4</button>
+        <button onclick="navigate(5)">5</button>
+    </div>
+
+    <script>
+        function navigate(pageNumber) {
+            // Logic to navigate to the corresponding page or section
+            alert("Navigating to page " + pageNumber);
+        }
+    </script>
+</body>
 </html>
